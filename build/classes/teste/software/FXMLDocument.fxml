@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXCheckBox?>
+<?import com.jfoenix.controls.JFXDatePicker?>
+<?import com.jfoenix.controls.JFXTextArea?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="634.0" prefWidth="859.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="teste.software.Visao.FXMLDocumentController">
+   <children>
+      <VBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="534.0" prefWidth="597.0" style="-fx-background-color: DDDDDD; -fx-background-radius: 20;">
+         <children>
+            <Label prefHeight="11.0" prefWidth="143.0" text="Acerto de Caixa">
+               <font>
+                  <Font name="Calibri Bold" size="22.0" />
+               </font>
+               <VBox.margin>
+                  <Insets bottom="40.0" />
+               </VBox.margin>
+            </Label>
+            <JFXDatePicker fx:id="dpData" defaultColor="#4059a9" overLay="true" prefHeight="45.0" prefWidth="200.0" promptText="Data">
+               <padding>
+                  <Insets bottom="20.0" />
+               </padding>
+            </JFXDatePicker>
+            <HBox alignment="CENTER" fillHeight="false" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="50.0" prefWidth="200.0" style="-fx-border-style: dotted;">
+               <children>
+                  <Label text="Tipo">
+                     <HBox.margin>
+                        <Insets right="10.0" />
+                     </HBox.margin>
+                  </Label>
+                  <JFXCheckBox fx:id="cbInc" text="Inc.">
+                     <padding>
+                        <Insets right="20.0" />
+                     </padding>
+                  </JFXCheckBox>
+                  <JFXCheckBox fx:id="cbDesc" layoutX="212.0" layoutY="26.0" text="Desc." />
+               </children>
+               <VBox.margin>
+                  <Insets bottom="30.0" />
+               </VBox.margin>
+            </HBox>
+            <JFXTextField fx:id="tfvalor" labelFloat="true" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="25.0" prefWidth="200.0" promptText="Valor">
+               <VBox.margin>
+                  <Insets bottom="30.0" />
+               </VBox.margin>
+            </JFXTextField>
+            <JFXTextArea fx:id="taMotivo" labelFloat="true" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="111.0" prefWidth="200.0" promptText="Motivo" style="-fx-border-style: solid;">
+               <VBox.margin>
+                  <Insets bottom="20.0" />
+               </VBox.margin>
+            </JFXTextArea>
+            <JFXButton fx:id="btConfirmar" prefHeight="42.0" prefWidth="200.0" style="-fx-border-style: solid; -fx-border-radius: 5px; -fx-background-color: #98FB98;" text="Confirmar" textFill="#125412">
+               <font>
+                  <Font name="Calibri Bold" size="20.0" />
+               </font>
+            </JFXButton>
+         </children>
+      </VBox>
+   </children>
+</StackPane>
