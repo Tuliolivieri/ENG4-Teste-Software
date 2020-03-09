@@ -12,9 +12,9 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="634.0" prefWidth="859.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="teste.software.Visao.FXMLDocumentController">
+<StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="634.0" prefWidth="859.0" style="-fx-background-color: lightcyan;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="teste.software.Visao.FXMLDocumentController">
    <children>
-      <VBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="534.0" prefWidth="597.0" style="-fx-background-color: DDDDDD; -fx-background-radius: 20;">
+      <VBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="534.0" prefWidth="597.0" style="-fx-background-color: DDDDDD; -fx-background-radius: 20; -fx-border-radius: 20; -fx-border-color: #4059A9;">
          <children>
             <Label prefHeight="11.0" prefWidth="143.0" text="Acerto de Caixa">
                <font>
@@ -24,7 +24,7 @@
                   <Insets bottom="40.0" />
                </VBox.margin>
             </Label>
-            <JFXDatePicker fx:id="dpData" defaultColor="#4059a9" overLay="true" prefHeight="45.0" prefWidth="200.0" promptText="Data">
+            <JFXDatePicker fx:id="dpData" defaultColor="#4059a9" prefHeight="45.0" prefWidth="200.0" promptText="Data">
                <padding>
                   <Insets bottom="20.0" />
                </padding>
@@ -36,12 +36,12 @@
                         <Insets right="10.0" />
                      </HBox.margin>
                   </Label>
-                  <JFXCheckBox fx:id="cbInc" text="Inc.">
+                  <JFXCheckBox fx:id="cbInc" onAction="#clkCbInc" text="Inc.">
                      <padding>
                         <Insets right="20.0" />
                      </padding>
                   </JFXCheckBox>
-                  <JFXCheckBox fx:id="cbDesc" layoutX="212.0" layoutY="26.0" text="Desc." />
+                  <JFXCheckBox fx:id="cbDesc" layoutX="212.0" layoutY="26.0" onAction="#clkCbDesc" text="Desc." />
                </children>
                <VBox.margin>
                   <Insets bottom="30.0" />
