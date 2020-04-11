@@ -51,7 +51,7 @@ public class FXMLDocumentController implements Initializable
         tfvalor.setDisable(true);
         taMotivo.setDisable(true);
         
-        caixa = new Caixa(1, 1000.00, 0, true);
+        caixa = new Caixa(1, 1000.00, 0, false);
     }    
 
     @FXML

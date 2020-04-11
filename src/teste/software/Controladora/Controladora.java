@@ -50,13 +50,13 @@ public class Controladora
                     ok = Banco.getCon().manipular(sql);
                 }
                 else
-                   JOptionPane.showConfirmDialog(null, "Insira um motivo válido..."); 
+                   JOptionPane.showMessageDialog(null, "Insira um motivo válido..."); 
             }
             else
-                JOptionPane.showConfirmDialog(null, "Valor deve ser positivo...");
+                JOptionPane.showMessageDialog(null, "Valor deve ser positivo...");
         }
         else
-            JOptionPane.showConfirmDialog(null, "Caixa fechado...");
+            JOptionPane.showMessageDialog(null, "Caixa fechado...");
         
         return ok;
     }
