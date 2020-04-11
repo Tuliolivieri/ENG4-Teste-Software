@@ -40,8 +40,7 @@ public class TesteSoftware extends Application
     {
         if(!Banco.conectar())
         {
-            Alert alerta = new Alert(Alert.AlertType.ERROR, "Erro: " + Banco.getCon().getMensagemErro(), ButtonType.OK);
-            alerta.show();
+            JOptionPane.showConfirmDialog(null, "Erro:" + Banco.getCon().getMensagemErro());
         }
         else
             launch(args);

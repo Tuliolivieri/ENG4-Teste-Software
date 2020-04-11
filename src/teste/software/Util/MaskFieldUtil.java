@@ -88,7 +88,7 @@ public abstract class MaskFieldUtil {
     }
 
     public static void monetaryField(final TextField textField) {
-        textField.setAlignment(Pos.CENTER_LEFT);
+        textField.setAlignment(Pos.CENTER_RIGHT);
         textField.lengthProperty().addListener((observable, oldValue, newValue) -> {
             String value = textField.getText();
             value = value.replaceAll("[^0-9]", "");
@@ -97,7 +97,7 @@ public abstract class MaskFieldUtil {
             value = value.replaceAll("([0-9]{1})([0-9]{8})$", "$1.$2");
             value = value.replaceAll("([0-9]{1})([0-9]{5})$", "$1.$2");
             if(textField.getText().length() > 2)
-                value = value.replaceAll("([0-9]{1})([0-9]{2})$", "$1,$2");
+                value = value.replaceAll("([0-9]{1})([0-9]{2})$", "$1.$2");
             
             
             textField.setText(value);

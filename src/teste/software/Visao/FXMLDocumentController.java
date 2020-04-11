@@ -11,16 +11,14 @@ import com.jfoenix.controls.JFXDatePicker;
 import com.jfoenix.controls.JFXTextArea;
 import com.jfoenix.controls.JFXTextField;
 import java.net.URL;
+import java.time.Instant;
+import java.util.Date;
 import java.util.ResourceBundle;
-import javafx.beans.property.BooleanProperty;
-import javafx.beans.property.Property;
-import javafx.beans.property.SimpleBooleanProperty;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
-import javafx.scene.control.Alert;
-import javafx.scene.control.ButtonType;
-import javafx.scene.input.MouseEvent;
+import teste.software.Controladora.Controladora;
+import teste.software.Modelo.*;
 import teste.software.Util.MaskFieldUtil;
 
 /**
@@ -42,13 +40,18 @@ public class FXMLDocumentController implements Initializable
     private JFXTextArea taMotivo;
     @FXML
     private JFXButton btConfirmar;
+    
+    Caixa caixa;
+    
     @Override
     public void initialize(URL url, ResourceBundle rb)
     {
-        MaskFieldUtil.numericField(tfvalor);
+        MaskFieldUtil.monetaryField(tfvalor);
         
         tfvalor.setDisable(true);
         taMotivo.setDisable(true);
+        
+        caixa = new Caixa(1, 1000.00, 0, true);
     }    
 
     @FXML
@@ -82,5 +85,17 @@ public class FXMLDocumentController implements Initializable
             tfvalor.setDisable(true);
             taMotivo.setDisable(true);
         }
+    }
+
+    @FXML
+    private void clkConfirmar(ActionEvent event)
+    {
+        Controladora ctrl = new Controladora();
+        String tipo = "";
+        if(cbInc.isSelected())
+            tipo = "Incremento";
+        else
+            tipo = "Desconto";
+        boolean cadastrou = ctrl.cadastrarMovimento(caixa, Date.from(Instant.now()), taMotivo.getText(), tipo, Double.parseDouble(tfvalor.getText()));
     }
 }
